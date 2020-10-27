@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Details</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href=" https://fonts.googleapis.com/css?family=Lora">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="static/css/styles.css">
+</head>
+<body>
+
+<div class="container">
+
+    <br><br>
+    <div class="row">
+      <div class="col-sm-4">
+
+      </div>
+      <div class="col-sm-4">
+          <h4>Fill the form</h4>
+            <p>The form below will store the details in your AWS RDS MySQL Workbench</p>
+            <form action="/insert" method="POST">
+              <div class="form-group">
+                <label for="usr">Name:</label>
+                <input name="name" type="text" class="form-control" id="usr">
+              </div>
+              <div class="form-group">
+                <label for="pwd">Email:</label>
+                <input name="email" type="email" class="form-control" id="pwd">
+              </div>
+                <div class="form-group">
+                <label for="contact">Contact Number:</label>
+                <input name="contact" type="tel" class="form-control" id="contact" pattern="[0-9]{10}">
+              </div>
+                <div class="form-group">
+                <label for="address">Address :</label>
+                <textarea class="form-control" rows="5" id="address" name="address"></textarea>
+              </div>
+              <br>
+              <input type="submit" name="submit" value="Submit" class="btn btn-success">
+              <br>
+            </form>
+           <form action="/table" method="POST">
+               <br>
+               <a href=table><button class="btn btn-success" name="show">show</button> </a>
+           </form>
+      </div>
+    </div>
+    <hr>
+
+
+
+    <h4> The details are:</h4>
+       {{var}}
+
+    <br>
+    <br>
+    <hr>
+</div>
+
+</body>
+</html>
